@@ -45,8 +45,8 @@ body {
 /*header section*/
 .hero_area {
   height: 94vh;
-  background: -webkit-gradient(linear, left top, right top, from(#864ddf), to(#203376));
-  background: linear-gradient(to right, #864ddf, #203376);
+  /* background: -webkit-gradient(linear, left top, right top, from(#864ddf), to(#203376));
+  background: linear-gradient(to right, #864ddf, #203376); */
 }
 
 .hero_area::before {
@@ -434,8 +434,8 @@ a:focus {
 
 .why_section {
   color: #f9fcfb;
-  background: -webkit-gradient(linear, left top, right top, from(#1b3374), to(#8f4fe8));
-  background: linear-gradient(to right, #1b3374, #8f4fe8);
+  /* background: -webkit-gradient(linear, left top, right top, from(#1b3374), to(#8f4fe8));
+  background: linear-gradient(to right, #1b3374, #8f4fe8); */
 }
 
 .why_section .custom_heading-container h2 {

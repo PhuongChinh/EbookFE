@@ -8,6 +8,7 @@ import { ShareModule } from 'src/app/share/share.module';
 import { BookListComponent } from './book-list/book-list.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import {MatIconModule} from '@angular/material/icon';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: 'ui/page-detail', component: PageDetailComponent },
@@ -16,7 +17,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     PageDetailComponent,
-    BookListComponent
+    BookListComponent,
+    DashboardComponent
   ],
   imports: [
     CommonModule,
