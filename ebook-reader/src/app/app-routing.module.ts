@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'ui/books', component: BookListComponent },
   { path: 'ui/classes', component: ClassListComponent },
   { path: 'ui/teachers', component: TeacherListComponent },
-  { path: 'ui/page-detail', component: BookListComponent },
+  { path: 'ui/page-detail', component: PageDetailComponent },
   { path: 'ui/class-detail', component: ClassDetailComponent },
   { path: 'ui/dashboard', component: DashboardComponent },
   // { path: "", redirectTo: "ui/landing", pathMatch: "full" },

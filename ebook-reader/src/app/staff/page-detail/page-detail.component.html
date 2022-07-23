@@ -1,46 +1,66 @@
-<div class="hero_area">
-  <app-menu></app-menu>
-  <!-- end header section -->
-  <!-- slider section -->
-  <section class="slider_section">
-    <div class="row">
-      <div class="col-4" style="z-index: 1;">
-        <section class="contact_section layout_padding">
-          <div style="text-align: center; margin-bottom: 10px;">
-            <div class="d-flex justify-content-center">
-              <button class="btn" (click)="generateButton()">Add</button>
-              <button class="btn" (click)="generateButton()" style="display: none;">Add</button>
+<div id="wrapper">
+
+  <!-- Sidebar -->
+  <app-left-menu></app-left-menu>
+  <!-- End of Sidebar -->
+  <!-- Content Wrapper -->
+  <div id="content-wrapper" class="d-flex flex-column">
+
+    <!-- Main Content -->
+    <div id="content">
+
+      <!-- Topbar -->
+
+      <!-- End of Topbar -->
+
+      <!-- Begin Page Content -->
+      <div class="container-fluid" style="padding-top: 20px">
+
+        <!-- Page Heading -->
+        <section class="slider_section">
+          <div class="row">
+            <div class="col-10" style="z-index: 0;">
+              <div style="text-align: center;">
+                <img style="z-index: -1" class="page-detail"
+                  src="https://cdn.aprendecoreanohoy.com/9700-thickbox_default_2x/sejong-korean-conversation-2-beginner.jpg"
+                  alt="">
+              </div>
+            </div>
+            <div class="col-2" style="z-index: 1;">
+              <div style="text-align: center;">
+                <div>
+                  <button class="btn btn-success" (click)="generateButton()">Add</button>
+                  <button class="btn btn-primary" style="margin-right: 5px;">Save</button>
+                  <button class="btn btn-danger" (click)="deleteAllButton()">Delete</button>
+                </div>
+                <div *ngFor="let item of listButton, let i = index" cdkDrag (cdkDragEnded)="dragEnd($event, i)"
+                  style="display: flex">
+                  <a href="#" class="btn btn-primary btn-circle btn-lg">
+                    <mat-icon>mic</mat-icon>
+                  </a>
+                  <a href="#" class="btn btn-success btn-circle btn-lg">
+                    <mat-icon>speaker_group</mat-icon>
+                  </a>
+                  <a href="#" class="btn btn-info btn-circle btn-lg">
+                    <mat-icon>speaker</mat-icon>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
+
         </section>
-        <div *ngFor="let item of listButton, let i = index" cdkDrag (cdkDragEnded)="dragEnd($event, i)"
-          style="border: 1px solid white; text-align: right;">
-          <!--STUDENT RECORD-->
-          <button class="btn padding-0" type="submit">
-            <mat-icon>record_voice_over</mat-icon>
-          </button>
-          <!--STUDENT PLAY-->
-          <button class="btn padding-0" type="submit">
-            <mat-icon>speaker</mat-icon>
-          </button>
-          <!--TEACHER RECORD-->
-          <button class="btn padding-0" type="submit">
-            <mat-icon>record_voice_over</mat-icon>
-          </button>
-          <!--TEACHER PLAY-->
-          <button class="btn padding-0" type="submit">
-            <mat-icon>speaker</mat-icon>
-          </button>
-        </div>
       </div>
-      <div class="col-8" style="z-index: 0;">
-        <div style="text-align: center;">
-          <img style="z-index: -1" class="page-detail"
-            src="https://cdn.aprendecoreanohoy.com/9700-thickbox_default_2x/sejong-korean-conversation-2-beginner.jpg"
-            alt="">
-        </div>
-      </div>
+      <!-- /.container-fluid -->
+
     </div>
-  </section>
-  <!-- end slider section -->
+    <!-- End of Main Content -->
+
+    <!-- Footer -->
+    <app-footer></app-footer>
+    <!-- End of Footer -->
+
+  </div>
+  <!-- End of Content Wrapper -->
+
 </div>

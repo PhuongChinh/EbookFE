@@ -50,8 +50,11 @@ export class PageDetailComponent implements OnInit {
     this.position.x = this.initialPosition.x + this.offset.x;
     this.position.y = this.initialPosition.y + this.offset.y;
 
-    console.log(this.position, this.initialPosition, this.offset);
+    console.log(this.position, this.initialPosition,index);
 
     // this.listButton.splice(index, 1);
+  }
+  deleteAllButton() {
+    this.listButton = [];
   }
 }
