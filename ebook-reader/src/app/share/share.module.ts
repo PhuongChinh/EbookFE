@@ -2,20 +2,23 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MenuComponent } from './menu/menu.component';
 import { LeftMenuComponent } from './left-menu/left-menu.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
 @NgModule({
   declarations: [
     MenuComponent,
-    LeftMenuComponent
+    LeftMenuComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
     MenuComponent,
-    LeftMenuComponent
+    LeftMenuComponent,
+    FooterComponent
   ]
 })
 export class ShareModule { 

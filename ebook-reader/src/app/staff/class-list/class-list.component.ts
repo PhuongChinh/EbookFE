@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 @Component({
-  selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
+  selector: 'app-class-list',
+  templateUrl: './class-list.component.html',
+  styleUrls: ['./class-list.component.css']
 })
-export class MenuComponent implements OnInit {
+export class ClassListComponent implements OnInit {
 
   constructor(
     public router: Router
@@ -13,6 +14,7 @@ export class MenuComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
   redirectTo(path: string) {
     this.router.navigate([path])
   }

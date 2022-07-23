@@ -9,6 +9,13 @@ import { BookListComponent } from './book-list/book-list.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import {MatIconModule} from '@angular/material/icon';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ClassListComponent } from './class-list/class-list.component';
+import { ClassDetailComponent } from './class-detail/class-detail.component';
+import { TeacherListComponent } from './teacher-list/teacher-list.component';
+import { TeacherDetailComponent } from './teacher-detail/teacher-detail.component';
+import {MatSelectModule} from '@angular/material/select';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 const routes: Routes = [
   { path: 'ui/page-detail', component: PageDetailComponent },
@@ -18,7 +25,11 @@ const routes: Routes = [
   declarations: [
     PageDetailComponent,
     BookListComponent,
-    DashboardComponent
+    DashboardComponent,
+    ClassListComponent,
+    ClassDetailComponent,
+    TeacherListComponent,
+    TeacherDetailComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +37,10 @@ const routes: Routes = [
     BrowserModule,
     ShareModule.forRoot(),
     DragDropModule,
-    MatIconModule
-  ]
+    MatIconModule,
+    MatSelectModule,
+    MatAutocompleteModule,
+    ReactiveFormsModule
+ ]
 })
 export class  StaffModule { }

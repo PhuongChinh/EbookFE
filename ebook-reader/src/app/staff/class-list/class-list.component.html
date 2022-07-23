@@ -25,10 +25,10 @@
                         <div class="card-header py-3">
                             <div class="row">
                                 <div class="col-6">
-                                    <h6 class="m-0 font-weight-bold text-primary">List e-books</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">List class</h6>
                                 </div>
                                 <div class="col-6" style="text-align: right">
-                                    <button class="btn btn-success">Upload new e-book</button>
+                                    <button class="btn btn-success">Add new class</button>
                                 </div>
                             </div>
                         </div>
@@ -38,10 +38,9 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Book's name</th>
-                                            <th>Number of pages</th>
-                                            <th>Created time</th>
-                                            <th>Created by</th>
+                                            <th>Class name</th>
+                                            <th>Number of student</th>
+                                            <th>Teacher</th>
                                             <th>Action</th>
 
                                         </tr>
@@ -52,9 +51,8 @@
                                             <td>System Architect</td>
                                             <td>Edinburgh</td>
                                             <td>61</td>
-                                            <td>2011/04/25</td>
                                             <td>
-                                                <button class="btn btn-primary" style="margin-right: 5px;">Detail</button>
+                                                <button class="btn btn-primary" style="margin-right: 5px;" (click)="redirectTo('/ui/class-detail')">Detail</button>
                                                 <button class="btn btn-danger">Delete</button>
                                             </td>
                                         </tr>
@@ -78,5 +76,4 @@
 
     </div>
     <!-- End of Content Wrapper -->
-
 </div>
