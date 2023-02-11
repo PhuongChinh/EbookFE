@@ -16,6 +16,7 @@ import { TeacherDetailComponent } from './teacher-detail/teacher-detail.componen
 import {MatSelectModule} from '@angular/material/select';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ButtonComponent } from './button/button.component';
 
 const routes: Routes = [
   { path: 'ui/page-detail', component: PageDetailComponent },
@@ -29,7 +30,8 @@ const routes: Routes = [
     ClassListComponent,
     ClassDetailComponent,
     TeacherListComponent,
-    TeacherDetailComponent
+    TeacherDetailComponent,
+    ButtonComponent
   ],
   imports: [
     CommonModule,

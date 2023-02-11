@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { Router } from '@angular/router'; '@angular/router'
 import { CdkDragEnd } from "@angular/cdk/drag-drop";
+import { ButtonComponent } from '../button/button.component';
 
 @Component({
   selector: 'app-page-detail',
@@ -10,6 +11,7 @@ import { CdkDragEnd } from "@angular/cdk/drag-drop";
 export class PageDetailComponent implements OnInit {
   listButton: any = []
   listGeneratedButton: any = [];
+  @ViewChild('buttonRef') buttonRef : ButtonComponent | any; 
   constructor(
     private router: Router
   ) { }
@@ -35,6 +37,10 @@ export class PageDetailComponent implements OnInit {
         isDisplay: false
       }
     )
+    this.initialPosition = {
+      x: this.buttonRef?.positionX,
+      y: this.buttonRef?.positionY
+    }
   }
   redirectTo(path: string) {
     this.router.navigate([path])
